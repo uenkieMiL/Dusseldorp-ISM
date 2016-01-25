@@ -205,7 +205,7 @@ End Function
 Function Bijwerkenlijst()
 Dim a As Long
 Dim x As Long
-Dim v As Long: v = 0
+Dim V As Long: V = 0
 
 
 ListBox1.Clear
@@ -221,7 +221,7 @@ If Not IsEmpty(lijst) = True Then
             ListBox1.List(x, 4) = lijst(5, x)
             ListBox1.List(x, 5) = lijst(9, x)
             ListBox1.List(x, 6) = Format(lijst(13, x), "dd-mm-yyyy")
-            If lijst(13, x) < Now() Then v = v + 1
+            If lijst(13, x) < Now() Then V = V + 1
         Next x
     Else
     a = 0
@@ -235,7 +235,7 @@ If Not IsEmpty(lijst) = True Then
                 ListBox1.List(a, 4) = lijst(5, x)
                 ListBox1.List(a, 5) = lijst(9, x)
                 ListBox1.List(a, 6) = Format(lijst(13, x), "dd-mm-yyyy")
-                If lijst(13, x) < Now() Then v = v + 1
+                If lijst(13, x) < Now() Then V = V + 1
                 a = a + 1
             End If
         Next x
@@ -243,7 +243,7 @@ If Not IsEmpty(lijst) = True Then
 End If
 
 LabelAantalInWacht = ListBox1.ListCount
-LabelOverTijd = v
+LabelOverTijd = V
 End Function
 
 Function bijwerkenoverzicht()

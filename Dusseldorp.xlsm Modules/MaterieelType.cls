@@ -227,12 +227,12 @@ ErrorHandler:
 Resume ExitSub
 
 End Function
-Function FromList(r As Long, lijst As Variant, Optional v As Long = 0)
+Function FromList(r As Long, lijst As Variant, Optional V As Long = 0)
     If IsEmpty(lijst) = False Then
-        Me.MaterieelTypeId = lijst(0 + v, r)
-        Me.Artikelnummer = lijst(1 + v, r)
-        Me.Omschrijving = lijst(2 + v, r)
-        Me.Inactief = lijst(3 + v, r)
+        Me.MaterieelTypeId = lijst(0 + V, r)
+        Me.Artikelnummer = lijst(1 + V, r)
+        Me.Omschrijving = lijst(2 + V, r)
+        Me.Inactief = lijst(3 + V, r)
     End If
 End Function
 

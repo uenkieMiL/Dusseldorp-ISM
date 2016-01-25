@@ -339,7 +339,7 @@ End Function
 
 Function MaakLijstVestigingen() As Collection
 Dim lijst As Variant
-Dim v As Vestiging
+Dim V As Vestiging
 Dim a As Long
 Set MaakLijstVestigingen = New Collection
 Dim db As New DataBase
@@ -351,10 +351,10 @@ lijst = db.getLijstBySQL("SELECT * FROM NAAM_VESTIGING;")
 If IsEmpty(lijst) = False Then
     For r = 0 To UBound(lijst, 2)
         a = a + 1
-        Set v = New Vestiging
-        v.Id = a
-        v.Omschrijving = lijst(0, r)
-        MaakLijstVestigingen.Add v, CStr(v.Id)
+        Set V = New Vestiging
+        V.Id = a
+        V.Omschrijving = lijst(0, r)
+        MaakLijstVestigingen.Add V, CStr(V.Id)
     Next r
 End If
 End Function

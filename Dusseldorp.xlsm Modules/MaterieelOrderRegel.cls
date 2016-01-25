@@ -368,16 +368,16 @@ Dim lijst As Variant
 End Function
 
 
-Function FromListExtra(r As Long, lijst As Variant, Optional v As Long = 0)
-    Me.MaterieelOrderRegelId = lijst(0 + v, r)
-    Me.MaterieelOrderId = lijst(1 + v, r)
-    Me.MaterieelTypeId = lijst(2 + v, r)
-    Me.startdatum = lijst(3 + v, r)
-    Me.einddatum = lijst(4 + v, r)
-    Me.Gepland = lijst(5 + v, r)
-    If IsNull(lijst(6 + v, r)) = False Then Me.GeplandDatum = lijst(6 + v, r)
-    If IsNull(lijst(7 + v, r)) = False Then Me.GeplandGebruiker = lijst(7 + v, r)
-    If IsNull(lijst(8 + v, r)) = False Then Me.GeplandStation = lijst(8 + v, r)
-    If IsNull(lijst(9 + v, r)) = False Then Me.GeplandStation = lijst(9 + v, r)
+Function FromListExtra(r As Long, lijst As Variant, Optional V As Long = 0)
+    Me.MaterieelOrderRegelId = lijst(0 + V, r)
+    Me.MaterieelOrderId = lijst(1 + V, r)
+    Me.MaterieelTypeId = lijst(2 + V, r)
+    Me.startdatum = lijst(3 + V, r)
+    Me.einddatum = lijst(4 + V, r)
+    Me.Gepland = lijst(5 + V, r)
+    If IsNull(lijst(6 + V, r)) = False Then Me.GeplandDatum = lijst(6 + V, r)
+    If IsNull(lijst(7 + V, r)) = False Then Me.GeplandGebruiker = lijst(7 + V, r)
+    If IsNull(lijst(8 + V, r)) = False Then Me.GeplandStation = lijst(8 + V, r)
+    If IsNull(lijst(9 + V, r)) = False Then Me.GeplandStation = lijst(9 + V, r)
 End Function
 

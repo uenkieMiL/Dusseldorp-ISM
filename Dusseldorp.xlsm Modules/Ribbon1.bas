@@ -32,7 +32,7 @@ Sub PlanningenAanpassen(control As IRibbonControl)
 Dim Id As String
 Dim Vestiging As String
 Dim tekst As String
-Dim v As Vestiging
+Dim V As Vestiging
 Dim lijst As Collection
 Set lijst = Lijsten.MaakLijstVestigingen
 
@@ -47,9 +47,9 @@ Vestiging = ThisWorkbook.Vestiging
 If Id = "" Then
     Id = InputBox("Geef AUB het synergy nummmer op!", "SYNERGY NUMMER OPGEVEN")
     tekst = "Geef AUB de vestiging op waar het om gaat door het nummerieke waarde in te geven:" & vbNewLine
-    For Each v In lijst
-        tekst = tekst & v.Id & " = " & v.Omschrijving & vbNewLine
-    Next v
+    For Each V In lijst
+        tekst = tekst & V.Id & " = " & V.Omschrijving & vbNewLine
+    Next V
     Vestiging = InputBox(tekst, "SYNERGY NUMMER OPGEVEN")
 End If
 
@@ -57,8 +57,8 @@ If Id = "" Then Exit Sub
 If Vestiging = "" Then Exit Sub
 
 If IsNumeric(Vestiging) = True Then
-    Set v = lijst.item(Vestiging)
-    Vestiging = v.Omschrijving
+    Set V = lijst.item(Vestiging)
+    Vestiging = V.Omschrijving
 End If
 
 If Functies.CheckProjectIsAangemaakt(Id, Vestiging) = False Then
