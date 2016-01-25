@@ -1,0 +1,9 @@
+Attribute VB_Name = "kleuren"
+Public Const feestdag As Long = 12566463
+Public Const vandaag As Long = 12611584
+Public Const beoordeling_goed As Long = 5296274
+Public Const beoordeling_redelijk As Long = 49407
+Public Const beoordeling_onvoldoende As Long = 255
+Public Const taak_gereed As Long = 5287936
+Public Const taak_niet_gereed As Long = 192
+Public Const actiehouder As Long = 15773696
